@@ -20,6 +20,7 @@ A Java-based project demonstrating incremental software engineering challenges i
    javac UseCase2RoomInitialization.java
    javac UseCase3InventorySetup.java
 2. **Compile the classes:**
+   ```bash
    java UseCase1HotelBookingApp
    java UseCase2RoomInitialization
    java UseCase3InventorySetup
