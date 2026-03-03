@@ -2,19 +2,19 @@
 
 A Java-based project demonstrating incremental software engineering challenges including fair request handling and inventory consistency.
 
-Goal: Establish a predictable starting point by demonstrating how a Java program begins execution.
+Goal: Focus on domain design through inheritance and abstraction before introducing complex data structures.
 
 Core Concepts
 
-The main() Method: This is the entry point for every standalone Java application. The JVM specifically looks for the signature public static void main(String[] args).
+Abstraction: The Room class is an abstract concept that cannot be instantiated directly; it defines common attributes shared by all room types.
 
-Static Keyword: Marking the main() method as static allows the JVM to execute it without needing to create an instance (object) of the class first.
+Inheritance: Concrete classes like SingleRoom and SuiteRoom extend the Room class to reuse shared properties while allowing for specialization.
 
-Console Output: Utilizing System.out.println() provides the simplest way to observe program behavior during early development.
+Encapsulation: Room attributes (beds, size, price) are hidden within the class and controlled through defined behavior.
 
+Polymorphism: Referencing different room implementations using the base Room type allows for uniform handling and future extensibility
 ## Project Structure
-- **Use Case 1**: Basic application entry point and JVM execution.
-
+- **Use Case 2**: Domain modeling using Inheritance, Abstraction, and Polymorphism.
 ## Getting Started
 
 ### Prerequisites
@@ -23,7 +23,7 @@ Console Output: Utilizing System.out.println() provides the simplest way to obse
 ### Compilation & Execution
 1. **Compile the classes:**
    ```bash
-   javac UseCase1HotelBookingApp.java
+   javac UseCase2RoomInitialization.java
 2. **Run the program**
     ```bash
-   java UseCase1HotelBookingApp
+   java UseCase2RoomInitialization
