@@ -2,20 +2,18 @@
 
 A Java-based project demonstrating incremental software engineering challenges including fair request handling and inventory consistency.
 
-Goal: Focus on domain design through inheritance and abstraction before introducing complex data structures.
+Goal: Replace scattered variables with a single, consistent data structure to solve state management problems.
 
 Core Concepts
 
-Abstraction: The Room class is an abstract concept that cannot be instantiated directly; it defines common attributes shared by all room types.
+HashMap: A HashMap<String, Integer> maps room types to their available counts.
 
-Inheritance: Concrete classes like SingleRoom and SuiteRoom extend the Room class to reuse shared properties while allowing for specialization.
+Single Source of Truth: Centralizing data into one structure eliminates discrepancies caused by multiple variables representing the same state.
 
-Encapsulation: Room attributes (beds, size, price) are hidden within the class and controlled through defined behavior.
+Time Complexity ($O(1)$): HashMap provides average constant-time complexity for lookups and updates, making it ideal for frequent availability checks.
 
-Polymorphism: Referencing different room implementations using the base Room type allows for uniform handling and future extensibility
-## Project Structure
-- **Use Case 2**: Domain modeling using Inheritance, Abstraction, and Polymorphism.
-## Getting Started
+### Project Structure
+- **Use Case 3**: Centralized state management using `HashMap` for $O(1)$ lookup performance.## Getting Started
 
 ### Prerequisites
 * Java Development Kit (JDK) installed.
@@ -23,7 +21,7 @@ Polymorphism: Referencing different room implementations using the base Room typ
 ### Compilation & Execution
 1. **Compile the classes:**
    ```bash
-   javac UseCase2RoomInitialization.java
+   javac UseCase3InventorySetup.java
 2. **Run the program**
     ```bash
-   java UseCase2RoomInitialization
+   java UseCase3InventorySetup
