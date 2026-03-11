@@ -11,8 +11,7 @@ A Java-based project demonstrating incremental software engineering challenges i
 
 #### Benefit: Clear separation between searching (read) and booking (write) operations.
 
-### Project Structure
-- **Use Case 3**: Centralized state management using `HashMap` for $O(1)$ lookup performance.## Getting Started
+
 
 ### Prerequisites
 * Java Development Kit (JDK) installed.
