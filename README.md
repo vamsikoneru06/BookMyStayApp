@@ -3,16 +3,14 @@
 A Java-based project demonstrating incremental software engineering challenges including fair request handling and inventory consistency.
 
 ### Use Case 4
-#### Goal: Enable guests to view available rooms without modifying the system state.
+#### Goal: Handle multiple booking requests fairly using a First-Come-First-Served (FIFO) mechanism.
 
-#### Concept: Read-Only Access. Search operations are designed to read data without altering it, preventing accidental inventory corruption.
+#### Concept: Queue Data Structure. A Queue<Reservation> is used to preserve the exact order of arrival.
 
-#### Safety: Implements Defensive Programming by excluding room types with zero availability from results.
+#### Fairness: Guarantees that the earliest requests are processed first, mimicking real-world behavior during peak demand.
 
-#### Benefit: Clear separation between searching (read) and booking (write) operations.
+#### Decoupling: Separates the intake of a request (intent) from the actual allocation of a room.
 
-### Project Structure
-- **Use Case 3**: Centralized state management using `HashMap` for $O(1)$ lookup performance.## Getting Started
 
 ### Prerequisites
 * Java Development Kit (JDK) installed.
@@ -20,7 +18,7 @@ A Java-based project demonstrating incremental software engineering challenges i
 ### Compilation & Execution
 1. **Compile the classes:**
    ```bash
-   javac RoomSearchService.java
+   javac Reservation.java
 2. **Run the program**
     ```bash
-   java RoomSearchService
+   java Reservation
