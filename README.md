@@ -3,14 +3,13 @@
 A Java-based project demonstrating incremental software engineering challenges including fair request handling and inventory consistency.
 
 ### Use Case 4
-#### Goal: Handle multiple booking requests fairly using a First-Come-First-Served (FIFO) mechanism.
+#### Goal: Confirm booking requests by assigning unique room IDs while ensuring inventory consistency.
 
-#### Concept: Queue Data Structure. A Queue<Reservation> is used to preserve the exact order of arrival.
+#### Concept: Uniqueness Enforcement. Uses a Set<String> to store allocated room IDs, preventing the same room from being assigned twice.
 
-#### Fairness: Guarantees that the earliest requests are processed first, mimicking real-world behavior during peak demand.
+#### Atomic Operations: Room assignment and inventory updates occur together to avoid inconsistent system states.
 
-#### Decoupling: Separates the intake of a request (intent) from the actual allocation of a room.
-
+#### Benefit: Total elimination of "double-booking" scenarios through immediate synchronization.
 
 ### Prerequisites
 * Java Development Kit (JDK) installed.
@@ -18,7 +17,7 @@ A Java-based project demonstrating incremental software engineering challenges i
 ### Compilation & Execution
 1. **Compile the classes:**
    ```bash
-   javac Reservation.java
+   javac RoomAllocationService.java
 2. **Run the program**
     ```bash
-   java Reservation
+   java RoomAllocationService
